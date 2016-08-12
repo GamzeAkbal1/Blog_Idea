@@ -3,7 +3,6 @@
 	<h1><%=@idea.errors.full_messages.join(", ") %></h1>
 
 <%end%>
-<form action="<%= idea_path @idea %>" method="post">
-	<input type="hidden" name="_method" value="put">
+
 	<%= render "form" %>
-</form>
+

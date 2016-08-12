@@ -1,7 +1,6 @@
-<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-<input type="text" name="title" value="<%= @idea.title%>" >
-<textarea name="description" cols="40" rows="8">
-	<%= @idea.description %>
-</textarea>
-<input type="text" name="planned_to" value="<%= @idea.planned_to%>">
-<button type="submit" >Kaydet</button>
+<%= form_for @idea do |f| %>
+	<%= f.text_field :title, placeholder: "title" %>
+	<%= f.text_area :description, placeholder: "descc", rows: 10 %>
+	<%= f.date_select :planned_to, placeholder: "plannn" %>
+	<%= f.submit 'Gonder' %>
+<% end %> 

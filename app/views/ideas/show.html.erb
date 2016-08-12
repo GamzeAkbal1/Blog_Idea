@@ -1,3 +1,6 @@
+<%flash.each do |messages|%>
+    <p><%= messages %> </p>
+<% end %>
 Display Idea<br /><br />
 
 <b>ID </b><%= @idea.id %><br />
@@ -10,3 +13,4 @@ Display Idea<br /><br />
 <%= link_to "Black to idea list ", ideas_path %>
 <br/>
 <%= link_to "Edit Idea ", edit_idea_path(@idea) %>
+<%= link_to "Delete ", idea_path(@idea), method: :delete, data: {confirm: "Are you sure?"} %>
