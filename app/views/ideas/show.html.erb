@@ -5,4 +5,8 @@ Display Idea<br /><br />
 <b>Description </b><%= @idea.description %><br />
 
 <br/><br/>
-<a href="/ideas">Back to idea list</a>
+
+<br/><br/>
+<%= link_to "Black to idea list ", ideas_path %>
+<br/>
+<%= link_to "Edit Idea ", edit_idea_path(@idea) %>

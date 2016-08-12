@@ -4,8 +4,5 @@
 
 <%end%>
 <form action="<%= ideas_path %>" method="post">
-<input type="text" name="title" >
-<textarea name="description" cols="40" rows="8"></textarea>
-<input type="text" name="planned_to">
-<button type="submit" >Kaydet</button>
+<%= render "form" %>
 </form>

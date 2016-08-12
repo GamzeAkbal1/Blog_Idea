@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get 'ideas', to: 'ideas#index'
   get 'ideas/:id', to: 'ideas#show', as: "idea"
   post 'ideas', to: 'ideas#create'
-  get 'ideas/:id/edit', to:'ideas#edit'
+  get 'ideas/:id/edit', to:'ideas#edit', as: "edit_idea"
   put 'ideas/:id', to: 'ideas#update'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
