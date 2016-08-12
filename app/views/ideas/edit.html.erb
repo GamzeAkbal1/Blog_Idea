@@ -1,0 +1,14 @@
+<h1>Edit <%= @idea.title %></h1>
+<% if @idea.errors.any? %>
+	<h1><%=@idea.errors.full_messages.join(", ") %></h1>
+
+<%end%>
+<form action="<%= idea_path @idea %>" method="post">
+	<input type="hidden" name="_method" value="put">
+<input type="text" name="title" value="<%= @idea.title%>" >
+<textarea name="description" cols="40" rows="8">
+	<%= @idea.description %>
+</textarea>
+<input type="text" name="planned_to" value="<%= @idea.planned_to%>">
+<button type="submit" >Kaydet</button>
+</form>
